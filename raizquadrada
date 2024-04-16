@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora de raiz quadrada</title>
+</head>
+<body>
+
+<h2>Calculadora de raiz quadrada</h2>
+
+<p>Insira três valores e clique em 'Calcular' para calcular a raiz quadrada de cada um deles!</p>
+
+<input type="numero" id="valor1" placeholder="Valor 1"><br>
+<input type="numero" id="valor2" placeholder="Valor 2"><br>
+<input type="numero" id="valor3" placeholder="Valor 3"><br><br>
+
+<button onclick="calcularQuadrados()">Calcular raiz</button>
+
+<p>Raízes quadradas:</p>
+<p id="resultado"></p>
+
+<script>
+function calcularQuadrados() {
+    // recebe e armazena os valores inputados
+    var valor1 = parseFloat(document.getElementById("valor1").value);
+    var valor2 = parseFloat(document.getElementById("valor2").value);
+    var valor3 = parseFloat(document.getElementById("valor3").value);
+
+    // Calcula a raiz quadrada
+    var quadrado1 = valor1 * valor1;
+    var quadrado2 = valor2 * valor2;
+    var quadrado3 = valor3 * valor3;
+
+    // Exibe os resultados
+    document.getElementById("resultado").innerHTML = "Valor 1: " + quadrado1 + "<br>Valor 2: " + quadrado2 + "<br>Valor 3: " + quadrado3;
+}
+</script>
+
+</body>
+</html>
