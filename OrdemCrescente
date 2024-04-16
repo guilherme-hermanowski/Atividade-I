@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ordenação crescente de valores</title>
+</head>
+<body>
+
+<h2>Ordenando valores em formato crescente</h2>
+
+<p>Insira 5 valores de sua escolha nas variaveis e depois clique em "ordenar" para organizá-los em ordem crescente! </p>
+
+<input type="numero" id="valor1" placeholder="Valor 1"><br>
+<input type="numero" id="valor2" placeholder="Valor 2"><br>
+<input type="numero" id="valor3" placeholder="Valor 3"><br>
+<input type="numero" id="valor4" placeholder="Valor 4"><br>
+<input type="numero" id="valor5" placeholder="Valor 5"><br><br>
+
+<button onclick="ordenarValores()">Ordenar</button>
+
+<p>Valores Ordenados: <span id="valoresOrdenados"></span></p>
+
+<script>
+function ordenarValores() {
+    // Recebe e armazena os valores inputados
+    var valor1 = parseFloat(document.getElementById("valor1").value);
+    var valor2 = parseFloat(document.getElementById("valor2").value);
+    var valor3 = parseFloat(document.getElementById("valor3").value);
+    var valor4 = parseFloat(document.getElementById("valor4").value);
+    var valor5 = parseFloat(document.getElementById("valor5").value);
+
+    // Coloca os valores em um array
+    var valores = [valor1, valor2, valor3, valor4, valor5];
+
+    // Ordena o array
+    valores.sort(function(a, b) {
+        return a - b;
+    });
+
+    // Exibe os valores ordenados
+    document.getElementById("valoresOrdenados").innerText = valores.join(", ");
+}
+</script>
+
+</body>
+</html>
